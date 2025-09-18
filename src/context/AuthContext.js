@@ -35,8 +35,6 @@ export const AuthProvider = ({ children }) => {
         try {
             const response = await apiRegister(username, email, password);
             if (response.status === "success") {
-                setUser(response.data);
-                localStorage.setItem("user", JSON.stringify(response.data));
                 return { success: true };
             } else {
                 return { success: false, message: response.message };

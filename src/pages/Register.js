@@ -39,8 +39,8 @@ const Register = () => {
         try {
             const result = await register(username, email, password);
             if (result.success) {
-                // Redirect to dashboard after successful registration
-                navigate("/dashboard");
+                // Redirect to login after successful registration
+                navigate("/login");
             } else {
                 setError(result.message || "Registration failed");
             }
