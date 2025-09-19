@@ -45,21 +45,8 @@ const Navbar = () => {
                     />
                 </MDBNavbarBrand>
 
-                {/* Search */}
-                <MDBInputGroup tag="form" className="d-none d-md-flex w-auto my-auto">
-                    <input
-                        type="search"
-                        className="form-control rounded"
-                        placeholder='Search (ctrl + "/" to focus)'
-                        style={{ minWidth: "225px" }}
-                    />
-                    <span className="input-group-text border-0">
-                        <MDBIcon fas icon="search" />
-                    </span>
-                </MDBInputGroup>
-
                 {/* Right side links */}
-                <MDBNavbarNav className="ms-auto d-flex flex-row">
+                <MDBNavbarNav className="ms-auto d-flex flex-row justify-content-end">
                     {/* Notification dropdown */}
                     <MDBNavbarItem>
                         <MDBDropdown>
