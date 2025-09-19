@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import "../assets/css/login.css";
 import { sAlert } from "../utils/Functions";
+import toast from "react-hot-toast";
 import {
     MDBContainer,
     MDBRow,
@@ -36,7 +37,8 @@ const Login = () => {
         try {
             const result = await login(email, password);
             if (result.success) {
-                await sAlert("success", "Login Successfully");
+                // await sAlert("success", "Login Successfully");
+                toast.success("Login Successful 🎉");
                 navigate("/dashboard");
             } else {
                 setError(result.message || "Invalid credentials");
